@@ -1,12 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class AddMoney : MonoBehaviour
+public class AddMoney : MonoBehaviour {
+
+public Text moneyText;
+public int currentGold;
+
+void Start()
 {
-   public int playerMoney = 0;
-
-   void addPlayerMoney(addAmount){
-       playerMoney += addAmount;
-   }
+    if(PlayerPrefs.HasKey("CurrentMoney"))
+    {
+        currentGold = PlayerPrefs.GetInt("CurrentMoney");
+    }
+    else
+    {
+        currentGold = 0;
+        PlayerPrefs.SetInt("CurrentMoney", 0);
+    }
+    moneyText.text = "Gold: " + currentGold;
+}
 }
