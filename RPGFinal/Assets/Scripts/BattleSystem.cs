@@ -29,17 +29,10 @@ public class BattleSystem : MonoBehaviour
 
 	public BattleState state;
 
-    // Start is called before the first frame update
+
     void Start()
     {	
-		whichEnemy = Random.Range (1,4);
-			if (whichEnemy == 1)
-			{GameObject enemyGO = Instantiate(enemy1, enemyBattleStation);}
-			if (whichEnemy == 2)
-			{GameObject enemyGO = Instantiate(enemy2, enemyBattleStation);}
-			if (whichEnemy >= 3)
-			{GameObject enemyGO = Instantiate(enemy3, enemyBattleStation);}
-			{enemyUnit = enemyGO.GetComponent<Unit>();}
+
 		state = BattleState.START;
 		StartCoroutine(SetupBattle());
     }
@@ -48,8 +41,14 @@ public class BattleSystem : MonoBehaviour
 	{
 		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
 		playerUnit = playerGO.GetComponent<Unit>();
-
-		
+		whichEnemy = Random.Range (1,4);
+			if (whichEnemy == 1)
+			{GameObject enemyGO = Instantiate(enemy1, enemyBattleStation);}
+			if (whichEnemy == 2)
+			{GameObject enemyGO = Instantiate(enemy2, enemyBattleStation);}
+			if (whichEnemy >= 3)
+			{GameObject enemyGO = Instantiate(enemy3, enemyBattleStation);}
+			enemyUnit = enemyGO.GetComponent<Unit>();
 
 
 		dialogueText.text = "A " + enemyUnit.unitName + " attacks!";
@@ -111,7 +110,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		if(state == BattleState.WON)
 		{
-			dialogueText.text = "You won the battle!";
+			dialogueText.text = "You won the battle! You gained" enemyUnit.Gold "Gold!";
             void loadNextScene()
             {
                 SceneManager.LoadScene("Town");
