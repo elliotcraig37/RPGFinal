@@ -2810,8 +2810,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 7833067867266759690, guid: 9b69e12f7d3f64686a9ff374d8d73031,
     type: 3}
-  enemyPrefab: {fileID: 7327400453591808043, guid: 6f75c46e11acd4d8cb3008d9b28581ea,
-    type: 3}
+  enemy1: {fileID: 7327400453591808043, guid: 6f75c46e11acd4d8cb3008d9b28581ea, type: 3}
+  enemy2: {fileID: 8988471334480611325, guid: 979f56ef4cab34a9fb9271cf3cacc1b0, type: 3}
+  enemy3: {fileID: 6632093652515554513, guid: 05c62036bec904feda2a3fe1db758999, type: 3}
+  whichEnemy: 1
   playerBattleStation: {fileID: 596733962}
   enemyBattleStation: {fileID: 288133807}
   dialogueText: {fileID: 998398563}

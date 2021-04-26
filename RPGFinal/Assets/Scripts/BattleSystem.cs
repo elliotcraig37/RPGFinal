@@ -110,7 +110,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		if(state == BattleState.WON)
 		{
-			dialogueText.text = "You won the battle! You gained" enemyUnit.Gold "Gold!";
+			dialogueText.text = "You won the battle! You gained" + enemyUnit.Gold + "Gold!";
             void loadNextScene()
             {
                 SceneManager.LoadScene("Town");
