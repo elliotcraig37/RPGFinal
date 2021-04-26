@@ -131,3 +131,4 @@ MonoBehaviour:
   damage: 10
   maxHP: 20
   currentHP: 20
+  Gold: 20
