@@ -21,4 +21,17 @@ void Start()
     }
     moneyText.text = "Gold: " + currentGold;
 }
+
+void Update()
+{
+
+}
+
+
+public void gainMoney(int goldToAdd)
+{
+    currentGold += goldToAdd;
+    PlayerPrefs.SetInt("CurrentMoney", currentGold);
+    moneyText.text = "Gold: " + currentGold;
+}
 }
