@@ -14,6 +14,8 @@ public class BattleSystem : MonoBehaviour
 	public GameObject enemy2;
 	public GameObject enemy3;
 
+	public int whichEnemy=1;
+
 	public Transform playerBattleStation;
 	public Transform enemyBattleStation;
 
@@ -29,7 +31,7 @@ public class BattleSystem : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {	
 		state = BattleState.START;
 		StartCoroutine(SetupBattle());
     }
@@ -39,7 +41,13 @@ public class BattleSystem : MonoBehaviour
 		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
 		playerUnit = playerGO.GetComponent<Unit>();
 
-		GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
+		GameObject enemyGO = whichEnemy = Random.Range (1,4);
+			if (whichEnemy == 1)
+			Instantiate(enemy1, enemyBattleStation);
+			if (whichEnemy == 2)
+			Instantiate(enemy2, enemyBattleStation);
+			if (whichEnemy >= 3)
+			Instantiate(enemy3, enemyBattleStation);
 		enemyUnit = enemyGO.GetComponent<Unit>();
 
 		dialogueText.text = "A " + enemyUnit.unitName + " attacks!";
