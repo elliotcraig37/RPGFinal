@@ -10,7 +10,9 @@ public class BattleSystem : MonoBehaviour
 {
 
 	public GameObject playerPrefab;
-	public GameObject enemyPrefab;
+	public GameObject enemy1;
+	public GameObject enemy2;
+	public GameObject enemy3;
 
 	public Transform playerBattleStation;
 	public Transform enemyBattleStation;
