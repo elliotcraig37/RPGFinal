@@ -23,7 +23,7 @@ public class BattleSystem : MonoBehaviour
 	Unit enemyUnit;
 
 	public Text dialogueText;
-
+	public AddMoney AddMoney;
 	public BattleHUD playerHUD;
 	public BattleHUD enemyHUD;
 
@@ -41,14 +41,9 @@ public class BattleSystem : MonoBehaviour
 	{
 		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
 		playerUnit = playerGO.GetComponent<Unit>();
-		whichEnemy = Random.Range (1,4);
-			if (whichEnemy == 1)
-			{GameObject enemyGO = Instantiate(enemy1, enemyBattleStation);}
-			if (whichEnemy == 2)
-			{GameObject enemyGO = Instantiate(enemy2, enemyBattleStation);}
-			if (whichEnemy >= 3)
-			{GameObject enemyGO = Instantiate(enemy3, enemyBattleStation);}
-			enemyUnit = enemyGO.GetComponent<Unit>();
+
+		GameObject enemyGO = Instantiate(enemy1, enemyBattleStation);
+		enemyUnit = enemyGO.GetComponent<Unit>();
 
 
 		dialogueText.text = "A " + enemyUnit.unitName + " attacks!";
@@ -110,7 +105,8 @@ public class BattleSystem : MonoBehaviour
 	{
 		if(state == BattleState.WON)
 		{
-			dialogueText.text = "You won the battle! You gained" + enemyUnit.Gold + "Gold!";
+			dialogueText.text = "You won the battle! You gained " + enemyUnit.Gold + " Gold!";
+			AddMoney.gainMoney(enemyUnit.Gold);
             void loadNextScene()
             {
                 SceneManager.LoadScene("Town");

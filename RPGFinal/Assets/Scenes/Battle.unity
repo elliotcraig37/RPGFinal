@@ -2817,6 +2817,7 @@ MonoBehaviour:
   playerBattleStation: {fileID: 596733962}
   enemyBattleStation: {fileID: 288133807}
   dialogueText: {fileID: 998398563}
+  AddMoney: {fileID: 0}
   playerHUD: {fileID: 2136316494}
   enemyHUD: {fileID: 958568853}
   state: 0
