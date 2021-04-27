@@ -9,7 +9,6 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
 
-	public GameObject playerPrefab;
 	public GameObject enemy1;
 	public GameObject enemy2;
 	public GameObject enemy3;
@@ -29,7 +28,7 @@ public class BattleSystem : MonoBehaviour
 	public BattleHUD enemyHUD;
 
 	public BattleState state;
-	
+
 	private readonly string selectedCharacter = "SelectedCharacter";
 
     void Start()
@@ -40,9 +39,22 @@ public class BattleSystem : MonoBehaviour
     }
 
 	IEnumerator SetupBattle()
-	{
-		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
-		playerUnit = playerGO.GetComponent<Unit>();
+	{	int getCharacter; 
+
+		getCharacter = PlayerPrefs.GetInt(selectedCharacter);
+
+		switch(getCharacter)
+		{
+			case 1:
+				Instantiate(Mage, playerBattleStation);
+				playerUnit = Mage.GetComponent<Unit>();
+				break;
+			case 2:
+				Instantiate(Mage, playerBattleStation);
+				playerUnit = Mage.GetComponent<Unit>();
+				break;
+		}
+
 
 		whichEnemy = Random.Range(1,4);
 			if (whichEnemy == 1)
