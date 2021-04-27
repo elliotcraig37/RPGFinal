@@ -127,12 +127,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Mage
-  unitLevel: 5
   damage: 10
   Magicdamage: 20
   maxHP: 30
   currentHP: 30
   maxMana: 30
-  currentMana: 30
+  currentMana: 6
   Gold: 0
   Potions: 3

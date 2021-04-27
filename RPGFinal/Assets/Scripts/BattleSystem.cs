@@ -162,8 +162,12 @@ public class BattleSystem : MonoBehaviour
 	{
 		if (state != BattleState.PLAYERTURN)
 			return;
-
-		StartCoroutine(PlayerMagicAttack());
+		if (playerUnit.currentMana == 0)
+			{dialogueText.text = "You have no mana!";
+			return;}
+		else
+		{
+			StartCoroutine(PlayerMagicAttack());}
 	}
 
 
