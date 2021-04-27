@@ -17,7 +17,6 @@ public class BattleHUD : MonoBehaviour
 		levelText.text = "Lvl " + unit.unitLevel;
 		hpSlider.maxValue = unit.maxHP;
 		hpSlider.value = unit.currentHP;
-		Potions.text = "You have" + unit.Potions + " Potions";
 	}
 
 	public void SetHP(int hp)
