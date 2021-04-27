@@ -13,7 +13,8 @@ public class BattleSystem : MonoBehaviour
 	public GameObject enemy1;
 	public GameObject enemy2;
 	public GameObject enemy3;
-
+	public GameObject Mage;
+	public GameObject Warrior;
 	public int whichEnemy=1;
 
 	public Transform playerBattleStation;
@@ -28,7 +29,8 @@ public class BattleSystem : MonoBehaviour
 	public BattleHUD enemyHUD;
 
 	public BattleState state;
-
+	
+	private readonly string selectedCharacter = "SelectedCharacter";
 
     void Start()
     {	
@@ -41,6 +43,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
 		playerUnit = playerGO.GetComponent<Unit>();
+
 		whichEnemy = Random.Range(1,4);
 			if (whichEnemy == 1)
 				{GameObject enemyGO = Instantiate(enemy1, enemyBattleStation);
