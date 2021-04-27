@@ -9,10 +9,14 @@ public class Unit : MonoBehaviour
 	public int unitLevel;
 
 	public int damage;
+	public int Magicdamage;
 
 	public int maxHP;
 	public int currentHP;
 
+	public int maxMana;
+	public int currentMana;
+	
 	public int Gold;
 	public int Potions;
 

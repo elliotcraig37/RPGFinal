@@ -129,7 +129,10 @@ MonoBehaviour:
   unitName: Mage
   unitLevel: 5
   damage: 10
+  Magicdamage: 20
   maxHP: 30
   currentHP: 30
+  maxMana: 0
+  currentMana: 0
   Gold: 0
   Potions: 3

@@ -158,6 +158,31 @@ public class BattleSystem : MonoBehaviour
 			return;
 		}
 	}
+	public void OnMagicButton()
+	{
+		if (state != BattleState.PLAYERTURN)
+			return;
 
+		StartCoroutine(PlayerMagicAttack());
+	}
+		IEnumerator PlayerMagicAttack()
+	{
+		bool isDead = enemyUnit.TakeDamage(playerUnit.Magicdamage);
+
+		enemyHUD.SetHP(enemyUnit.currentHP);
+		dialogueText.text = "You Attack with a Fireball!";
+
+		yield return new WaitForSeconds(2f);
+
+		if(isDead)
+		{
+			state = BattleState.WON;
+			EndBattle();
+		} else
+		{
+			state = BattleState.ENEMYTURN;
+			StartCoroutine(EnemyTurn());
+		}
+	}
 }
 
