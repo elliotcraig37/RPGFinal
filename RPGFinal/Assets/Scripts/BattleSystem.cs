@@ -148,7 +148,7 @@ public class BattleSystem : MonoBehaviour
 		playerUnit.Heal(15);
 
 		playerHUD.SetHP(playerUnit.currentHP);
-		dialogueText.text = "You drink the potion and feel better!";
+		dialogueText.text = "You drink the potion and feel better! You have " + playerUnit.Potions + " Left!";
 		
 		yield return new WaitForSeconds(2f);
 

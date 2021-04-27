@@ -19,6 +19,7 @@ public class Unit : MonoBehaviour
 
 	public int Gold;
 	public int Potions;
+	public int ManaPots;
 
 	public bool TakeDamage(int dmg)
 	{
@@ -42,6 +43,7 @@ public class Unit : MonoBehaviour
 		currentMana += amount;
 		if (currentMana > maxMana)
 			currentMana = maxMana;
+		ManaPots -= 1;
 	}
 
 	public void Heal(int amount)
