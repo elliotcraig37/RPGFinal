@@ -21532,8 +21532,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2067067572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfaacb909b76a4e8abc844b0dbb64f61, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fa748b29f2df4841b0eb668bb5889d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mage: {fileID: 7575566497534051819, guid: 6521e398678244ecd956490f9003dac6, type: 3}
-  Warrior: {fileID: 2187268062341767489, guid: 22fa9270a629444c799152184d6ef438, type: 3}
+  MagePlayer: {fileID: 7575566497534051819, guid: 6521e398678244ecd956490f9003dac6,
+    type: 3}
+  WarriorPlayer: {fileID: 2187268062341767489, guid: 22fa9270a629444c799152184d6ef438,
+    type: 3}
+  StartPoint: {fileID: 1985907624}
