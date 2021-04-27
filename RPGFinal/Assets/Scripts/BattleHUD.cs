@@ -17,6 +17,7 @@ public class BattleHUD : MonoBehaviour
 		hpSlider.maxValue = unit.maxHP;
 		hpSlider.value = unit.currentHP;
 		Mana.value = unit.currentMana;
+		Mana.maxValue = unit.maxMana;
 	}
 
 	public void SetHP(int hp)
