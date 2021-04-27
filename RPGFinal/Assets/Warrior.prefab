@@ -49,15 +49,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3c9f352e04b4b4b96af6f4efa36bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Mage
-  damage: 10
-  Magicdamage: 20
-  maxHP: 30
-  currentHP: 30
-  maxMana: 30
-  currentMana: 30
+  unitName: Warrior
+  damage: 15
+  Magicdamage: 15
+  maxHP: 40
+  currentHP: 40
+  maxMana: 18
+  currentMana: 18
   Gold: 0
-  Potions: 3
+  Potions: 0
 --- !u!50 &303053150308245416
 Rigidbody2D:
   serializedVersion: 4
