@@ -50,8 +50,8 @@ public class BattleSystem : MonoBehaviour
 				playerUnit = Mage.GetComponent<Unit>();
 				break;
 			case 2:
-				Instantiate(Mage, playerBattleStation);
-				playerUnit = Mage.GetComponent<Unit>();
+				Instantiate(Warrior, playerBattleStation);
+				playerUnit = Warrior.GetComponent<Unit>();
 				break;
 		}
 
