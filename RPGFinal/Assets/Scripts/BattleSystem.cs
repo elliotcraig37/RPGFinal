@@ -41,10 +41,16 @@ public class BattleSystem : MonoBehaviour
 	{
 		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
 		playerUnit = playerGO.GetComponent<Unit>();
-
-		GameObject enemyGO = Instantiate(enemy1, enemyBattleStation);
-		enemyUnit = enemyGO.GetComponent<Unit>();
-
+		whichEnemy = Random.Range(1,4);
+			if (whichEnemy == 1)
+				{GameObject enemyGO = Instantiate(enemy1, enemyBattleStation);
+				enemyUnit = enemyGO.GetComponent<Unit>();}
+			if (whichEnemy == 2)
+				{GameObject enemyGO = Instantiate(enemy2, enemyBattleStation);
+				enemyUnit = enemyGO.GetComponent<Unit>();}
+			if (whichEnemy >= 3)
+				{GameObject enemyGO = Instantiate(enemy3, enemyBattleStation);
+				enemyUnit = enemyGO.GetComponent<Unit>();}
 
 		dialogueText.text = "A " + enemyUnit.unitName + " attacks!";
 
