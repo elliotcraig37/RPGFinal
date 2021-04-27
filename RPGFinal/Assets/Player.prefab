@@ -132,4 +132,4 @@ MonoBehaviour:
   maxHP: 30
   currentHP: 30
   Gold: 0
-  Potions: 2
+  Potions: 3

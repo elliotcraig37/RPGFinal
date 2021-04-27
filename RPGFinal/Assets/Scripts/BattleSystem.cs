@@ -129,7 +129,7 @@ public class BattleSystem : MonoBehaviour
 
 		playerHUD.SetHP(playerUnit.currentHP);
 		dialogueText.text = "You drink the potion and feel better!";
-
+		
 		yield return new WaitForSeconds(2f);
 
 		state = BattleState.ENEMYTURN;
