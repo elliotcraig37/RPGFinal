@@ -7,6 +7,8 @@ public class BattleHUD : MonoBehaviour
 {
 
 	public Text nameText;
+	public Text manapotsText;
+	public Text potionsText;
 
 	public Slider hpSlider;
 	public Slider Mana;

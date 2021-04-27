@@ -7,6 +7,9 @@ public class PlayerSpawner : MonoBehaviour
     public GameObject MagePlayer;
     public GameObject WarriorPlayer;
     public Transform StartPoint;
+    public PlayerHUD HUD;
+
+    Unit playerUnit;
     private readonly string selectedCharacter = "SelectedCharacter";
     // Start is called before the first frame update
     void Start()
@@ -18,11 +21,14 @@ public class PlayerSpawner : MonoBehaviour
         {
             case 1:
                 Instantiate(MagePlayer, StartPoint);
+                playerUnit = MagePlayer.GetComponent<Unit>();
                 break;
             case 2:
                 Instantiate(WarriorPlayer, StartPoint);
+                playerUnit = WarriorPlayer.GetComponent<Unit>();
                 break;
         }
+        HUD.SetHUD(playerUnit);
     }
     void Awake()
     {

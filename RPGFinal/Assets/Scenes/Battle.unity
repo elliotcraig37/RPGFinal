@@ -1955,6 +1955,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 1915843823}
+  manapotsText: {fileID: 0}
+  potionsText: {fileID: 0}
   hpSlider: {fileID: 286128028}
   Mana: {fileID: 430472800}
 --- !u!1 &965641850
@@ -3767,5 +3769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 1438981571}
+  manapotsText: {fileID: 0}
+  potionsText: {fileID: 0}
   hpSlider: {fileID: 175076203}
   Mana: {fileID: 387192797}

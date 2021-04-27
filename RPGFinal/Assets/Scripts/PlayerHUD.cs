@@ -37,13 +37,20 @@ public class PlayerHUD : MonoBehaviour
     }
     public void SetHUD(Unit unit)
     {
-        nameText.text = playerUnit.unitName;
-		hpSlider.maxValue = playerUnit.maxHP;
-		hpSlider.value = playerUnit.currentHP;
-		Mana.value = playerUnit.currentMana;
-		Mana.maxValue = playerUnit.maxMana;
-        manapotsText.text = playerUnit.ManaPots.ToString();
-        potionsText.text = playerUnit.Potions.ToString();
+        nameText.text = unit.unitName;
+		hpSlider.maxValue = unit.maxHP;
+		hpSlider.value = unit.currentHP;
+		Mana.value = unit.currentMana;
+		Mana.maxValue = unit.maxMana;
+        manapotsText.text = unit.ManaPots.ToString();
+        potionsText.text = unit.Potions.ToString();
     }
-
+    public void SetHP(int hp)
+	{
+		hpSlider.value = hp;
+	}
+	public void SetMana(int mana)
+	{
+		Mana.value = mana;
+	}
 }
