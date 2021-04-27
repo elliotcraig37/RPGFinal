@@ -9,7 +9,7 @@ public Text moneyText;
 public int currentGold;
 
 void Start()
-{
+{  
     if(PlayerPrefs.HasKey("CurrentMoney"))
     {
         currentGold = PlayerPrefs.GetInt("CurrentMoney");

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PlayButton : MonoBehaviour
 {  
-    AddMoney.SetInt("CurrentMoney", 0);
 
     public void loadNextScene() 
     {

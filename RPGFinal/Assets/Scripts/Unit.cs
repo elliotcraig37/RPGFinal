@@ -14,7 +14,8 @@ public class Unit : MonoBehaviour
 	public int currentHP;
 
 	public int Gold;
-	
+	public int Potions;
+
 	public bool TakeDamage(int dmg)
 	{
 		currentHP -= dmg;
@@ -27,9 +28,13 @@ public class Unit : MonoBehaviour
 
 	public void Heal(int amount)
 	{
+
 		currentHP += amount;
 		if (currentHP > maxHP)
 			currentHP = maxHP;
+
+
 	}
+		
 
 }

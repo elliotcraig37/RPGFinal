@@ -145,10 +145,18 @@ public class BattleSystem : MonoBehaviour
 	}
 	public void OnHealButton()
 	{
+		
 		if (state != BattleState.PLAYERTURN)
 			return;
-
+		if (playerUnit.Potions > 0)
+		{
 		StartCoroutine(PlayerHeal());
+		}
+		if (playerUnit.Potions == 0)
+		{
+			dialogueText.text = "You have no potions!";
+			return;
+		}
 	}
 
 }
