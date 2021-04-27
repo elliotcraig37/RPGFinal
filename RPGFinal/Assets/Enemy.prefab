@@ -129,6 +129,10 @@ MonoBehaviour:
   unitName: Fire Wraith
   unitLevel: 2
   damage: 5
-  maxHP: 15
-  currentHP: 15
+  Magicdamage: 0
+  maxHP: 100
+  currentHP: 100
+  maxMana: 0
+  currentMana: 0
   Gold: 9
+  Potions: 0

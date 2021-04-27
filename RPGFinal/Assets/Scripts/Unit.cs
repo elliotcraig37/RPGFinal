@@ -6,7 +6,7 @@ public class Unit : MonoBehaviour
 {
 
 	public string unitName;
-	public int unitLevel;
+
 
 	public int damage;
 	public int Magicdamage;
@@ -16,7 +16,7 @@ public class Unit : MonoBehaviour
 
 	public int maxMana;
 	public int currentMana;
-	
+
 	public int Gold;
 	public int Potions;
 
@@ -28,6 +28,20 @@ public class Unit : MonoBehaviour
 			return true;
 		else
 			return false;
+	}
+	public bool Magic(int amount)
+	{
+		currentMana -= amount;
+		if (currentMana <= 0)
+			return true;
+		else
+			return false;
+	}
+	public void MagicHeal(int amount)
+	{
+		currentMana += amount;
+		if (currentMana > maxMana)
+			currentMana = maxMana;
 	}
 
 	public void Heal(int amount)

@@ -165,13 +165,16 @@ public class BattleSystem : MonoBehaviour
 
 		StartCoroutine(PlayerMagicAttack());
 	}
-		IEnumerator PlayerMagicAttack()
+
+
+	IEnumerator PlayerMagicAttack()
 	{
 		bool isDead = enemyUnit.TakeDamage(playerUnit.Magicdamage);
 
 		enemyHUD.SetHP(enemyUnit.currentHP);
 		dialogueText.text = "You Attack with a Fireball!";
-
+		playerUnit.Magic(6);
+		
 		yield return new WaitForSeconds(2f);
 
 		if(isDead)
