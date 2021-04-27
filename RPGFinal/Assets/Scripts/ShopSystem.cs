@@ -34,21 +34,21 @@ public class ShopSystem : MonoBehaviour
         shopText.text = "Welcome! What can I get you?";
     }
     // Start is called before the first frame update
-    void OnPotionButton()
+   public void OnPotionButton()
     {
         playerUnit.PotionBuy(1);
         AddMoney.gainMoney(-10);
         shopText.text = "Pleasure doing business!";
     }
 
-    void OnManaButton()
+   public void OnManaButton()
     {
         playerUnit.ManaBuy(1);
         AddMoney.gainMoney(-20);
         shopText.text = "Pleasure doing business!";
     }
 
-    void OnExitButton()
+   public void OnExitButton()
     {
         StartCoroutine(Exit());
     }
