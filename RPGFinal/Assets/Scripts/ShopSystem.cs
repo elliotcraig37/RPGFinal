@@ -8,8 +8,8 @@ public class ShopSystem : MonoBehaviour
 {
     public GameObject Mage;
     public GameObject Warrior;
-    public GameObject Shop;
 
+    public AddMoney AddMoney;
     Unit playerUnit;
     Unit shopUnit;
 
@@ -30,17 +30,18 @@ public class ShopSystem : MonoBehaviour
 				playerUnit = Warrior.GetComponent<Unit>();
 				break;
 		}
-        shopUnit = Shop.GetComponent<Unit>();
     }
     // Start is called before the first frame update
     void OnPotionButton()
     {
-        
+        playerUnit.PotionBuy(1);
+        AddMoney.gainMoney(-10);
     }
 
     void OnManaButton()
     {
-
+        playerUnit.ManaBuy(1);
+        AddMoney.gainMoney(-20);
     }
 
     // Update is called once per frame

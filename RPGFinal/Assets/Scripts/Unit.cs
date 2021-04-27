@@ -55,6 +55,13 @@ public class Unit : MonoBehaviour
 		Potions -= 1;
 
 	}
-		
+	public void PotionBuy(int amount)
+	{
+		Potions += amount;
+	}
+	public void ManaBuy(int amount)
+	{
+		ManaPots += amount;
+	}
 
 }
