@@ -173,8 +173,8 @@ public class BattleSystem : MonoBehaviour
 
 		enemyHUD.SetHP(enemyUnit.currentHP);
 		dialogueText.text = "You Attack with a Fireball!";
-		playerUnit.Magic(6);
-		
+		playerUnit.Magic(-6);
+		playerHUD.SetMana(playerUnit.currentMana);
 		yield return new WaitForSeconds(2f);
 
 		if(isDead)

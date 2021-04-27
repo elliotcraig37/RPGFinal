@@ -23,5 +23,8 @@ public class BattleHUD : MonoBehaviour
 	{
 		hpSlider.value = hp;
 	}
-
+	public void SetMana(int mana)
+	{
+		Mana.value = mana;
+	}
 }
