@@ -113,17 +113,16 @@ public class BattleSystem : MonoBehaviour
 		{
 			dialogueText.text = "You won the battle! You gained " + enemyUnit.Gold + " Gold!";
 			AddMoney.gainMoney(enemyUnit.Gold);
-            void loadNextScene()
-            {
-                SceneManager.LoadScene("Town");
-            }
-
+			StartCoroutine(Transition());
 		} else if (state == BattleState.LOST)
 		{
 			dialogueText.text = "You died.";
 		}
 	}
-
+	IEnumerator Transition()
+		{yield return new WaitForSeconds(2f);
+		SceneManager.LoadScene("Town");
+		}
 	void PlayerTurn()
 	{
 		dialogueText.text = "Choose an action:";
