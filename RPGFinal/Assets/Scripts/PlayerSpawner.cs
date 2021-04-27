@@ -7,20 +7,27 @@ public class PlayerSpawner : MonoBehaviour
     public GameObject MagePlayer;
     public GameObject WarriorPlayer;
     public Transform StartPoint;
-
+    private readonly string selectedCharacter = "SelectedCharacter";
     // Start is called before the first frame update
-    void Start(Unit unit)
-    {
-        if (ClassChoice.Mage == true)
+    void Start()
+    {   int getCharacter;
+
+       getCharacter = PlayerPrefs.GetInt(selectedCharacter);
+
+        switch(getCharacter)
         {
-            Instantiate(MagePlayer, StartPoint);
-        }
-        if (ClassChoice.Warrior == true)
-        {
-            Instantiate(WarriorPlayer, StartPoint);
+            case 1:
+                Instantiate(MagePlayer, StartPoint);
+                break;
+            case 2:
+                Instantiate(WarriorPlayer, StartPoint);
+                break;
         }
     }
+    void Awake()
+    {
 
+    }
     // Update is called once per frame
     void Update()
     {

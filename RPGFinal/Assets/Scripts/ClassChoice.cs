@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ClassChoice : MonoBehaviour
 {
-   public bool Mage;
-   public bool Warrior;
+   public GameObject Mage;
+   public GameObject Warrior;
+    private readonly string selectedCharacter = "SelectedCharacter";
 
     void Start()
     {
@@ -14,15 +15,13 @@ public class ClassChoice : MonoBehaviour
     }
     public void OnMageButton()
     {
-        Mage = true;
-        Warrior = false;
+        PlayerPrefs.SetInt(selectedCharacter, 1);
         SceneManager.LoadScene("Town");
     
     }
     public void OnWarriorButton()
     {
-        Mage = false;
-        Warrior = true;
+        PlayerPrefs.SetInt(selectedCharacter, 2);
         SceneManager.LoadScene("Town");
     }
     // Update is called once per frame
