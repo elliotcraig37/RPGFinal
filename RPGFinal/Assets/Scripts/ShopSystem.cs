@@ -8,6 +8,7 @@ public class ShopSystem : MonoBehaviour
 {
     public GameObject Mage;
     public GameObject Warrior;
+    public Text shopText;
 
     public AddMoney AddMoney;
     Unit playerUnit;
@@ -30,20 +31,33 @@ public class ShopSystem : MonoBehaviour
 				playerUnit = Warrior.GetComponent<Unit>();
 				break;
 		}
+        shopText.text = "Welcome! What can I get you?";
     }
     // Start is called before the first frame update
     void OnPotionButton()
     {
         playerUnit.PotionBuy(1);
         AddMoney.gainMoney(-10);
+        shopText.text = "Pleasure doing business!";
     }
 
     void OnManaButton()
     {
         playerUnit.ManaBuy(1);
         AddMoney.gainMoney(-20);
+        shopText.text = "Pleasure doing business!";
     }
 
+    void OnExitButton()
+    {
+        StartCoroutine(Exit());
+    }
+    IEnumerator Exit()
+    {
+        shopText.text = "Bye! Come back soon!";
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Town");
+    }
     // Update is called once per frame
     void Update()
     {
