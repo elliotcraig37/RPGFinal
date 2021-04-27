@@ -202,7 +202,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 83978855}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 116940987}
+        m_MethodName: OnMageButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &83978855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfaacb909b76a4e8abc844b0dbb64f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mage: 0
+  Warrior: 0
 --- !u!1 &153942343
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +622,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 974145902}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 116940987}
+        m_MethodName: OnWarriorButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &974145902
 MonoBehaviour:
   m_ObjectHideFlags: 0
