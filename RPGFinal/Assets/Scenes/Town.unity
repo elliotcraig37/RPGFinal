@@ -21782,13 +21782,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baeed786d4beb4cb7b7c1fce5e4d2010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mage: {fileID: 0}
-  Warrior: {fileID: 0}
-  nameText: {fileID: 0}
-  potionsText: {fileID: 0}
-  manapotsText: {fileID: 0}
-  hpSlider: {fileID: 0}
-  Mana: {fileID: 0}
+  Mage: {fileID: 7575566497534051819, guid: 6521e398678244ecd956490f9003dac6, type: 3}
+  Warrior: {fileID: 2187268062341767489, guid: 22fa9270a629444c799152184d6ef438, type: 3}
+  nameText: {fileID: 1448714427}
+  potionsText: {fileID: 564737912}
+  manapotsText: {fileID: 2066065170}
+  hpSlider: {fileID: 605271601}
+  Mana: {fileID: 1330807078}
 --- !u!4 &1042780229
 Transform:
   m_ObjectHideFlags: 0
