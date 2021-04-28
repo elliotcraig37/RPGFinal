@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Choose Class.unity
     guid: f97ee3353c0374ef4936f1947184002d
+  - enabled: 1
+    path: Assets/Scenes/EncounterField.unity
+    guid: 3b42c51b659864b3c94127ef451bdd35
   m_configObjects: {}
