@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {	
     [SerializeField]
     private float speed;
-    public Animator animator;
  
+    public Animator animator;
     void FixedUpdate () 
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
