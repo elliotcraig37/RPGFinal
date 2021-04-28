@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class EnterShop : MonoBehaviour
 {
-private void OnTriggerEnter()
+void OnTriggerEnter2d(Collider2D other)
 {
-    SceneManager.LoadScene("Shop");
+    if (other.CompareTag("Player"))
+    {
+        SceneManager.LoadScene("Shop");
+    }
 }
 
 
