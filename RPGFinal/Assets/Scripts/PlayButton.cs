@@ -9,6 +9,6 @@ public class PlayButton : MonoBehaviour
 
     public void loadNextScene() 
     {
-        SceneManager.LoadScene("Town");
+        SceneManager.LoadScene("Choose Class");
     }
 }
