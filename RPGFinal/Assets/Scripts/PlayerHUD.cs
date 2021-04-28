@@ -42,8 +42,8 @@ public class PlayerHUD : MonoBehaviour
 		hpSlider.value = unit.currentHP;
 		Mana.value = unit.currentMana;
 		Mana.maxValue = unit.maxMana;
-        manapotsText.text = unit.ManaPots.ToString();
-        potionsText.text = unit.Potions.ToString();
+        manapotsText.text = "Mana Potions: " + unit.ManaPots.ToString();
+        potionsText.text = "Health Potions: " + unit.Potions.ToString();
     }
     public void SetHP(int hp)
 	{
