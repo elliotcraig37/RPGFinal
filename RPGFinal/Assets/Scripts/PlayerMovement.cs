@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {	
     [SerializeField]
     private float speed;
- 
+    public Animator animator;
  
     void FixedUpdate () 
     {
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 currentVelocity = gameObject.GetComponent<Rigidbody2D>().velocity;
 
         float newVelocityX = 0f;
-        
+        animator.SetFloat("Speed", newVelocityX);
 
         if (sceneName == "Battle")
         {
