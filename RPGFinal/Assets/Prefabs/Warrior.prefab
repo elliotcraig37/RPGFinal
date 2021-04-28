@@ -53,7 +53,7 @@ MonoBehaviour:
   damage: 15
   Magicdamage: 15
   maxHP: 40
-  currentHP: 35
+  currentHP: 25
   maxMana: 18
   currentMana: 12
   Gold: 0
@@ -142,9 +142,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1950141517
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -255,9 +255,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1950141517
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -5309098620300691502, guid: df92da7a1384f4816bef2e54c4730bd2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

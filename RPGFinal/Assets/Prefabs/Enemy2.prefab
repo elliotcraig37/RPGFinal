@@ -67,8 +67,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1781211325
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 2707675988109361695, guid: 7ae046f6b73c241d5ad40c011b2ac124,
     type: 3}
@@ -127,8 +127,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Skeleton
-  unitLevel: 1
   damage: 3
+  Magicdamage: 0
   maxHP: 10
   currentHP: 10
+  maxMana: 0
+  currentMana: 0
   Gold: 4
+  Potions: 0
+  ManaPots: 0

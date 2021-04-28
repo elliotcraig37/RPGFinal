@@ -44,3 +44,6 @@ TagManager:
   - name: HUD
     uniqueID: 2513755971
     locked: 0
+  - name: Sprites
+    uniqueID: 1950141517
+    locked: 0
