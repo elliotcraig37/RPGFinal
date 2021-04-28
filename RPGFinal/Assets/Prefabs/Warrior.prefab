@@ -53,7 +53,7 @@ MonoBehaviour:
   damage: 15
   Magicdamage: 15
   maxHP: 40
-  currentHP: 25
+  currentHP: 5
   maxMana: 18
   currentMana: 12
   Gold: 0

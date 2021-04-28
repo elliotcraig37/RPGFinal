@@ -1,23 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour 
 {	
     [SerializeField]
     private float speed;
  
-
  
     void FixedUpdate () 
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
- 
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
         Vector2 currentVelocity = gameObject.GetComponent<Rigidbody2D>().velocity;
- 
+
         float newVelocityX = 0f;
- 
+        
+
+        if (sceneName == "Battle")
+        {
+            return;
+        }
+        else
+        {
         if(moveHorizontal < 0 && currentVelocity.x <= 0) 
         {
             newVelocityX = -speed;
@@ -45,5 +54,9 @@ public class PlayerMovement : MonoBehaviour
 
  
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(newVelocityX, newVelocityY);
+
+
+        }
     }
+   
 }
