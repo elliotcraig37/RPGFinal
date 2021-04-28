@@ -35,20 +35,23 @@ public class PlayerMovement : MonoBehaviour
         else if(moveHorizontal > 0 && currentVelocity.x >= 0) 
         {
             newVelocityX = speed;
+         
          {
-      // Pick a number between 0 and 100
-            int value = Random.Range(0, 10000);
+
+            int value = Random.Range(0, 50000);
       
-      // Check if the number is below the current threshold
+
             if (value < currentEncounterThreshold)
             {
-        // If it is, then start an encounter, and set the threshold back to the default value for next time.
+                if (sceneName == "EncounterField")
+                {
              SceneManager.LoadScene("Battle");
              currentEncounterThreshold = DEFAULT_ENCOUNTER_THRESHOLD;
+                }
             }
          else
         {
-        // We weren't below the threshold this time, so let's increase it
+
              currentEncounterThreshold += 1;
          }
     }
