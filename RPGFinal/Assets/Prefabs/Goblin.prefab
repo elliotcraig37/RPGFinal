@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 7327400453591808045}
   - component: {fileID: 7327400453591808044}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,8 +129,8 @@ MonoBehaviour:
   unitName: Fire Wraith
   damage: 5
   Magicdamage: 0
-  maxHP: 100
-  currentHP: 100
+  maxHP: 15
+  currentHP: 15
   maxMana: 0
   currentMana: 0
   Gold: 9
