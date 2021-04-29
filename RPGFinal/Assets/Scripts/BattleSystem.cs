@@ -190,7 +190,20 @@ public class BattleSystem : MonoBehaviour
 		{
 			StartCoroutine(PlayerMagicAttack());}
 	}
-
+	public void OnManaButton()
+	{
+		if (state != BattleState.PLAYERTURN)
+			return;
+		if (playerUnit.Potions > 0)
+		{
+			StartCoroutine(ManaHeal());
+		}
+		if (playerUnit.ManaPots == 0)
+		{
+			dialogueText.text = "You have no mana potions!";
+			return;
+		}
+	}
 
 	IEnumerator PlayerMagicAttack()
 	{
@@ -212,6 +225,19 @@ public class BattleSystem : MonoBehaviour
 			StartCoroutine(EnemyTurn());
 		}
 	}
+	IEnumerator ManaHeal()
+	{
+		playerUnit.ManaHeal(18);
+
+		playerHUD.SetMana(playerUnit.currentMana);
+		dialogueText.text = "You drink the potion and feel magic coursing through you! You have " + playerUnit.ManaPots + " left!";
+		
+		yield return new WaitForSeconds(2f);
+
+		state = BattleState.ENEMYTURN;
+		StartCoroutine(EnemyTurn());
+	}
+
 	IEnumerator DeathTransition()
 	{
 		dialogueText.text = "You died.";

@@ -38,7 +38,7 @@ public class Unit : MonoBehaviour
 		else
 			return false;
 	}
-	public void MagicHeal(int amount)
+	public void ManaHeal(int amount)
 	{
 		currentMana += amount;
 		if (currentMana > maxMana)
