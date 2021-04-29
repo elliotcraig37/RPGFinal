@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Mage
   damage: 10
-  Magicdamage: 20
+  Magicdamage: 25
   maxHP: 30
   currentHP: 30
   maxMana: 30

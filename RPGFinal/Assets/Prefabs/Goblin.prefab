@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Goblin
-  damage: 5
+  damage: 8
   Magicdamage: 0
-  maxHP: 15
-  currentHP: 15
+  maxHP: 30
+  currentHP: 30
   maxMana: 0
   currentMana: 0
   Gold: 9

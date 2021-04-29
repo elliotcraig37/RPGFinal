@@ -48,11 +48,11 @@ MonoBehaviour:
   unitName: Skeleton
   damage: 3
   Magicdamage: 0
-  maxHP: 10
-  currentHP: 10
+  maxHP: 50
+  currentHP: 50
   maxMana: 0
   currentMana: 0
-  Gold: 4
+  Gold: 7
   Potions: 0
   ManaPots: 0
 --- !u!212 &7336306287357119210
