@@ -15,7 +15,7 @@ public class BattleSystem : MonoBehaviour
 	public GameObject Mage;
 	public GameObject Warrior;
 	public int whichEnemy=1;
-
+	public LevelChanger LevelChanger;
 	public Transform playerBattleStation;
 	public Transform enemyBattleStation;
 
@@ -131,11 +131,12 @@ public class BattleSystem : MonoBehaviour
 			StartCoroutine(Transition());
 		} else if (state == BattleState.LOST)
 		{
-			dialogueText.text = "You died.";
+			StartCoroutine(DeathTransition());
 		}
 	}
 	IEnumerator Transition()
 		{yield return new WaitForSeconds(2f);
+		LevelChanger.FadeToLevel(0);
 		SceneManager.LoadScene("Town");
 		}
 	void PlayerTurn()
@@ -210,6 +211,12 @@ public class BattleSystem : MonoBehaviour
 			state = BattleState.ENEMYTURN;
 			StartCoroutine(EnemyTurn());
 		}
+	}
+	IEnumerator DeathTransition()
+	{
+		dialogueText.text = "You died.";
+		yield return new WaitForSeconds(2f);
+		SceneManager.LoadScene("DeathScreen");
 	}
 }
 
