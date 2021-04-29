@@ -28,4 +28,15 @@ public class ToField : MonoBehaviour
         yield return new WaitForSeconds(2f);
       SceneManager.LoadScene("EncounterField");
     }
+    public void OnTownPressed()
+    {
+        StartCoroutine(EnterTown());
+    }
+    IEnumerator EnterTown()
+    {
+        dialogueText.text = "You return to town, exhausted from your adventures...";
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Town");
+    }
+    
 }

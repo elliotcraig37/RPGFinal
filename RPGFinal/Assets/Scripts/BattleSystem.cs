@@ -137,7 +137,7 @@ public class BattleSystem : MonoBehaviour
 	IEnumerator Transition()
 		{yield return new WaitForSeconds(2f);
 		LevelChanger.FadeToLevel(0);
-		SceneManager.LoadScene("Town");
+		SceneManager.LoadScene("EncounterField");
 		}
 	void PlayerTurn()
 	{
