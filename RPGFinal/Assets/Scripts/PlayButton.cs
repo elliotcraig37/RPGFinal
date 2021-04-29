@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayButton : MonoBehaviour
 {  
 
-    public void loadNextScene() 
+    public void OnPlayPressed()
     {
         SceneManager.LoadScene("Choose Class");
     }
